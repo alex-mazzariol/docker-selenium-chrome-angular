@@ -4,7 +4,7 @@ A Selenium/standalone-chrome container with nodejs, npm, angular-cli ready for C
 ## Usage in GitLab-CI
 You can select this image for use in GitLab-CI to have a ready-to-use Selenium with Chrome standalone environment.
 
-To use, please set the `image` parameter in your `.gitlab-ci.yml` to the correct repository/image, and don't forget to start the Selenium server before running e2e tests with `/opt/bin/entry_point.sh &`.
+To use, please set the `image` parameter in your `.gitlab-ci.yml` to the correct repository/image, and don't forget to start the Selenium server before running your tests with `/opt/bin/entry_point.sh &`.
 ```
 [...]
 
@@ -97,7 +97,7 @@ module.exports = function (config) {
                     .usingServer('http://localhost:4444/wd/hub')
                     .build();
             }
-	      }
+	}
     },
 [...]
 });
