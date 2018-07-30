@@ -16,10 +16,14 @@ develop_test:
 [...]
 ```
 
-Make sure you set Protractor's config file to use the already-started Selenium instance, instead of spinning up one. Put something like this in your `e2e/protractor.conf.js`:
+Make sure you set Protractor's config file to use the already-started Selenium instance, instead of spinning up one.
+
+To do this, you must add a `seleniumAddress` value pointing to localhost, and remove/comment out the `directConnect` value.
+Put something like this in your `e2e/protractor.conf.js`:
 ```
 exports.config = {
 [...]
+  directConnect: false,
   seleniumAddress: 'http://localhost:4444/wd/hub',
 [...]
 };
